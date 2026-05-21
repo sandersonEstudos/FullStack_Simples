@@ -1,0 +1,4 @@
+CREATE TABLE tb_user(
+    id INT AUTO_INCREMENT PRIMERY KEY,
+    name VARCHAR(100)
+);
