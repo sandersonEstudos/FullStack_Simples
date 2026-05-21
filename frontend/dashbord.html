@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard - App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">App Profissional</div>
+    <div class="top-actions">
+      <button class="btn ghost" onclick="toggleHelp()">Ajuda</button>
+      <button class="btn" onclick="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel left">
+      <div class="panel-card">
+        <h2>Cadastro / Edição</h2>
+        <form id="formCadastro" class="form-inline">
+          <input type="hidden" id="id" />
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" required />
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn primary">Salvar</button>
+            <button type="button" class="btn ghost" onclick="limparForm()">Limpar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel-card">
+        <h2>Usuários</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>ID</th><th>Nome</th><th>Ações</th></tr>
+            </thead>
+            <tbody id="tabelaUsuarios"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel right">
+      <div class="panel-card">
+        <h2>Visualização 3D</h2>
+        <p class="muted">Clique em um objeto para editar o usuário correspondente.</p>
+        <div id="threeContainer" class="three-container"></div>
+      </div>
+
+      <div class="panel-card small">
+        <h3>Informações</h3>
+        <div id="infoBox" class="info-box">Nenhum usuário selecionado</div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="helpModal" class="modal hidden">
+    <div class="modal-card">
+      <h3>Ajuda rápida</h3>
+      <p>Use o formulário para criar ou editar. Clique nos objetos 3D para selecionar.</p>
+      <button class="btn" onclick="toggleHelp()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

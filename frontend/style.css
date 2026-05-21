@@ -1,0 +1,50 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#6ee7b7;
+  --muted:#9aa6b2;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --gap:16px;
+  --text:#e6eef6;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:linear-gradient(180deg,#071021 0%, #0b1220 100%);}
+
+.page-center{display:flex;align-items:center;justify-content:center;height:100vh}
+.card{background:var(--card);padding:28px;border-radius:16px;box-shadow:0 6px 30px rgba(2,6,23,0.6);width:360px}
+.login-card h1{margin:0 0 12px 0}
+.form{display:flex;flex-direction:column;gap:10px}
+.form label{font-size:13px;color:var(--muted)}
+.form input{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:var(--text)}
+.btn{padding:8px 12px;border-radius:10px;border:none;cursor:pointer;background:#1f2937;color:var(--text)}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#34d399);color:#042018;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04)}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);backdrop-filter: blur(6px)}
+.brand{font-weight:700;font-size:18px;color:var(--accent)}
+
+.layout{display:flex;gap:20px;padding:20px;max-width:1200px;margin:20px auto}
+.panel{flex:1;display:flex;flex-direction:column;gap:16px}
+.panel.left{max-width:520px}
+.panel.right{max-width:520px}
+
+.panel-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.small{padding:12px}
+.form-inline{display:flex;flex-direction:column;gap:10px}
+.field{display:flex;flex-direction:column}
+.actions{display:flex;gap:8px;align-items:center}
+
+.table-wrap{max-height:320px;overflow:auto}
+.table{width:100%;border-collapse:collapse}
+.table th, .table td{padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px}
+.table button{padding:6px 8px;border-radius:8px;font-size:13px}
+
+.three-container{height:420px;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#071021,#081426);display:flex;align-items:center;justify-content:center}
+.info-box{padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;color:var(--muted)}
+
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5)}
+.modal.hidden{display:none}
+.modal-card{background:var(--card);padding:20px;border-radius:12px;width:320px;text-align:center}
+.muted{color:var(--muted);font-size:13px}
